@@ -1,0 +1,104 @@
+/*
+Imports
+ */
+/*
+Variables
+ */
+h1 {
+  color: #909;
+  font-family: Tahoma, sans-serif;
+}
+p {
+  color: #909;
+}
+/*
+Mixins
+ */
+.panel {
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin: 10px;
+}
+.little-panel {
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin: 10px;
+  font-size: 12px;
+  padding: 5px;
+}
+.big-panel {
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin: 10px;
+  font-size: 32px;
+  padding: 20px;
+}
+/*
+Nested Rules
+ */
+#side-nav {
+  background: #333;
+}
+#side-nav a:link,
+#side-nav a:visited {
+  color: white;
+  display: block;
+  padding: 8px;
+}
+#side-nav a:hover {
+  background: #777;
+}
+/*
+Nested conditionals
+ */
+#welcome-banner {
+  font-size: 32px;
+  background: lightgreen;
+  /*
+Only on small screens
+ */
+}
+@media screen and (max-width: 768px) {
+  #welcome-banner {
+    font-size: 18px;
+    background: lightgreen;
+  }
+}
+/*
+Simple operations
+ */
+.button {
+  background: #006699;
+  color: #FFF;
+  padding: 5px;
+  display: inline-block;
+}
+.jumbo-button {
+  background: #006699;
+  color: #FFF;
+  padding: 5px;
+  display: inline-block;
+  padding: 35px;
+}
+.light-button {
+  background: #006699;
+  color: #FFF;
+  padding: 5px;
+  display: inline-block;
+  background: #00a3f5;
+}
+/*
+File paths
+ */
+#one {
+  height: 500px;
+  width: 800px;
+  margin-bottom: 10px;
+  background: url("images/tiger.jpg");
+}
+#two {
+  height: 500px;
+  width: 800px;
+  margin-bottom: 10px;
+  background: url("images/homepage/cat.png");
+}

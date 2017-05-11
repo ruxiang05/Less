@@ -1,0 +1,120 @@
+/*
+Imports
+ */
+@import 'buttons';
+/*
+Variables
+ */
+@main-color: #909;
+@buttonBackground: #006699;
+@buttonPadding: 5px;
+@buttonColor:#FFF;
+
+h1{
+  color: @main-color;
+  font-family: Tahoma,sans-serif;
+}
+
+p{
+  color: @main-color;
+}
+
+/*
+Mixins
+ */
+.panel{
+  border: 3px solid dodgerblue;
+  background: lightgreen;
+  margin:10px;
+}
+
+.little-panel{
+  .panel;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.big-panel{
+  .panel;
+  font-size: 32px;
+  padding: 20px;
+}
+
+/*
+Nested Rules
+ */
+
+#side-nav{
+  background: #333;
+  //Apply to only links in side-nav
+  a:link,a:visited{
+    color: white;
+    display: block;
+    padding: 8px;
+  }
+
+  a:hover{
+    background: #777;
+  }
+}
+
+/*
+Nested conditionals
+ */
+
+#welcome-banner{
+  font-size: 32px;
+  background: lightgreen;
+
+/*
+Only on small screens
+ */
+  @media screen{
+    @media (max-width: 768px){
+      font-size: 18px;
+      background: lightgreen;
+    }
+  }
+}
+
+/*
+Simple operations
+ */
+
+.button{
+  background: @buttonBackground;
+  color:@buttonColor;
+  padding:@buttonPadding;
+  display: inline-block;
+}
+
+.jumbo-button{
+  .button;
+  padding: @buttonPadding + 30;
+}
+
+.light-button{
+  .button;
+  background: @buttonBackground * 1.6;
+}
+
+/*
+File paths
+ */
+
+@images:'images/';
+@homepage-images:'images/homepage/';
+
+#one{
+  height: 500px;
+  width: 800px;
+  margin-bottom: 10px;
+  background: url("@{images}tiger.jpg");
+}
+
+#two{
+  height: 500px;
+  width: 800px;
+  margin-bottom: 10px;
+  background: url("@{homepage-images}cat.png");
+}
